@@ -58,14 +58,12 @@ class SelectionSort:
         """
         n = len(arr)
         for i in range(n - 1):
-            min_index = i  # Assume the current index has the minimum value
+            min_index = i  
             
-            # Find the index of the smallest element in the remaining unsorted section
             for j in range(i + 1, n):
                 if self._less(arr[j], arr[min_index]):
                     min_index = j
             
-            # Swap the found minimum element with the first element of the unsorted section
             if min_index != i:
                 self._exch(arr, i, min_index)
     
